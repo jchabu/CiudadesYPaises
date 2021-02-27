@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UT08-01 Ciudades y más</title>
+    <!--CSS de mapa-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!---->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Ciudades y Países</h1>
+    </header>
+    <main>
+        <div class="game">
+            <div class="zonaJuego">
+                <div class="game-header">
+                    <button class="boton-partida">Nueva Partida</button>
+                    <div class="tiempo">
+                        Tiempo :
+                        <span class="segundos">
+                            0
+                        </span>
+                    </div>
+                </div>
+                <div class="draggable-zone"></div>
+                <div class="droppable-zone"></div>
+            </div>
+            <div id="map" class="map"></div>
+            <div id="linechart" class="barras"></div>
+            <div class="circular" id="piechart"></div>
+        </div>
+    </main>
+    <template id="ciudad-template">
+        <div class="box" data-code="">
+            <h5></h5>
+        </div>
+    </template>
+    <template id="pais-template">
+        <div class="box-drop" data-code="">
+            <h5></h5>
+            <div class="zone-drop"></div>
+        </div>
+    </template>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!---->
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
