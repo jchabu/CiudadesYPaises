@@ -4,6 +4,14 @@ $fondoGris: darken($fondoBlanco, 15%)
 $fondoGrisOscuro: darken($fondoBlanco, 25%)
 $azulMetal: steelblue
 
+@font-face
+    font-family: 'Roboto'
+    font-weight: normal
+    src: url('../fonts/RobotoMono-Bold.ttf')
+
+*
+    font-family: 'Roboto'
+
 header
     h1
         color: white
@@ -11,36 +19,16 @@ header
         text-align: center
         height: 1.5em
         margin: 0px
-
-.game
-    height: 500px
-    display: grid
-    grid-template-columns: 1.2fr 0.8fr
-    grid-template-rows: 1fr 1fr
-    grid-column-gap: 0px
-    grid-row-gap: 0px
-
-    &-header
-        height: 75px
-        background-color: $fondoGris
-        display: flex
-        justify-content: space-between
-        align-items: center
-.zonaJuego
-    display: flex
-    flex-direction: column
-.map
-    height: 500px
-
-.boton-partida
-    height: 40px
-    width: 200px
-    border-radius: 10px 10px 10px 10px
-    border: 1px solid $azulMetal
-    background-color: $fondoBlancoOscuro
-    font-weight: bolder
-    color: $azulMetal
-    margin: 30px
+        font-family: Roboto
+.game-header
+    .boton-partida
+        height: 40px
+        width: 200px
+        border-radius: 10px 10px 10px 10px
+        border: 1px solid $azulMetal
+        background-color: $fondoBlancoOscuro
+        color: $azulMetal
+        margin: 30px
     &:hover
         background-color: $fondoGris
     &:active
@@ -50,45 +38,14 @@ header
         color: $fondoGrisOscuro
         border-color: $fondoGrisOscuro
 
-.tiempo
-    font-size: 30px
-    color: $azulMetal
-    display: flex
-    justify-content: center
-    align-items: center
+    .tiempo
+        font-size: 30px
+        color: $azulMetal
+        display: flex
+        justify-content: center
+        align-items: center
 
-.segundos
-    color: $azulMetal
-    font-size: 30px
-    margin: 30px
-
-.box, .box-drop
-    height: 50px
-    width: 150px
-    color: $azulMetal
-    display: flex
-    border: 1px solid $azulMetal
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    border-radius: 5px 5px 5px 5px
-    background-color: $fondoGris
-.box-drop
-    height: 150px
-    width: 210px
-.zone-drop
-    background-color: $fondoBlanco
-    width: 210px
-    height: 75px
-    margin: 0px
-    border: 1px solid $azulMetal
-    border-radius: 5px 5px 5px 5px
-
-.draggable-zone, .droppable-zone
-    display: flex
-    justify-content: space-around
-    margin-top: 30px
-    padding: 25px
-
-.success
-    background-color: lightgreen
+        .segundos
+            color: $azulMetal
+            font-size: 30px
+            margin: 30px

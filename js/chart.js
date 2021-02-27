@@ -1,6 +1,6 @@
 import { tiemposLinea, paisesCircular } from './main.js';
 
-google.charts.load('current', { 'packages': ['corechart'] });
+google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(drawChartCircular);
 google.charts.setOnLoadCallback(drawChartLinear);
 
