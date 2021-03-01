@@ -138,6 +138,7 @@ function manageDroppable(element) {
                 if (aciertos == paisesPorPartida) {
                     stopCounter(contador);
                     botonPartida.disabled = false;
+                    document.getElementById('dificultad').disabled = false;
                     var segundos = document.getElementsByClassName('segundos')[0].textContent;
                     tiemposLinea.push([ronda, Number(segundos)]);
                     drawChartLinear();
