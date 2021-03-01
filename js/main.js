@@ -19,6 +19,7 @@ for (let i = 0; i < paises.length; i++) {
     paisesCircular.push([paises[i].name, 0])
 }
 
+
 /**
  * Es la función que se lanza al hacer clic en "Nueva Partida", llama a otras funciones e inicia el contador
  */
