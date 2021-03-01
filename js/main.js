@@ -8,7 +8,7 @@ export var tiemposLinea = [];
 
 const botonPartida = document.getElementsByClassName('boton-partida')[0];
 const paises = gameData.countries;
-const paisesPorPartida = 5;
+var paisesPorPartida;
 const ciudadesPorPais = 3;
 
 var contador;
@@ -24,6 +24,7 @@ for (let i = 0; i < paises.length; i++) {
  */
 function nuevaRonda() {
     cleanPartida();
+    paisesPorPartida = document.getElementById('dificultad').value;
     contador = setInterval(startCounter, 1000);
     var paisesPartida = paisesParaPartida(paises);
     var ciudadesPartida = ciudadesParaPartida(paisesPartida);
@@ -107,7 +108,7 @@ function crearPais(pais) {
  */
 function manageDroppable(element) {
     $(element).droppable({
-        drop: function (a) {
+        drop: function(a) {
             if (a.target.dataset.code === a.toElement.parentNode.dataset.code) {
                 // Editar el draggable y añadirle al droppable la clase success
                 $(a.toElement.parentNode).draggable({ revert: false });
@@ -176,7 +177,7 @@ function ciudadesParaPartida(paisesSeleccion) {
     return shuffle(ciudadesPartida);
 }
 
-botonPartida.addEventListener('click', function () {
+botonPartida.addEventListener('click', function() {
     botonPartida.disabled = true;
     nuevaRonda();
 });
