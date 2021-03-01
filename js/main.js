@@ -30,6 +30,7 @@ function nuevaRonda() {
     var paisesPartida = paisesParaPartida(paises);
     var ciudadesPartida = ciudadesParaPartida(paisesPartida);
     printPartida(paisesPartida, ciudadesPartida);
+    document.getElementById('dificultad').disabled = true;
     ronda++;
 }
 /**
